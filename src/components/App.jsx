@@ -43,7 +43,7 @@ export class App extends Component {
 
   render() {
     return (
-      <>
+      <div>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}
@@ -58,12 +58,12 @@ export class App extends Component {
               bad={this.state.bad}
               total={this.state.total}
               positivePercentage={this.state.positivePercentage}
-            ></Statistics>
+            />
           ) : (
-            <Notification message="There is no feedback"></Notification>
+            <Notification message="There is no feedback" />
           )}
         </Section>
-      </>
+      </div>
     );
   }
 }
